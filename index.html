@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Basic</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<style type="text/css">
+		
+		#button input[type="button"] {
+
+			width: 20%;
+            float: right;
+            height: 46px;
+   		
+    	    }
+
+    	#button input[type="text"] {
+    		height: 62px;
+    	}    
+		
+		
+
+	</style>
+
+
+</head>
+<body>
+
+
+
+            <section style="margin: 47px;">
+ 				<!--Mark start-->
+ 			<form name="result" style="margin: 47px;">
+ 				<input type="text" name="grade" readonly><br>
+ 				<input type="number" name="take_data" placeholder="Type Your Result">
+ 				<input type="button"  onclick="dekhbo()" value="See Your Grade">
+ 			</form>
+                <!--Mark End-->
+ 			</section>
+
+
+
+ <div class="container py-5 my-5">
+ 	<div class="row justify-content-center">
+ 		<div class="col-6">
+
+            <!--Calculator Start-->
+ 			<form name="calculator" id="button">
+ 				<input type="text" name="display" readonly class="form-control bg-secondary navbar-dark text-light" >
+
+ 				<input type="button" onclick="zero()" value="0" class="btn-danger">
+ 				<input type="button" onclick="one()" value="1" class="btn-danger">
+ 				<input type="button" onclick="two()" value="2" class="btn-danger">
+ 				<input type="button" onclick="three()" value="3" class="btn-danger">
+ 				<input type="button" onclick="four()" value="4" class="btn-danger">
+
+ 				<br>
+
+ 				<input type="button" onclick="five()" value="5" class="btn-danger">
+ 				<input type="button" onclick="six()" value="6" class="btn-danger">
+ 				<input type="button" onclick="seven()" value="7" class="btn-danger">
+ 				<input type="button" onclick="eight()" value="8" class="btn-danger">
+ 				<input type="button" onclick="nine()" value="9" class="btn-danger">
+
+ 				<br>
+
+ 				<input type="button" onclick="add()" value="+" class="btn-info change">
+ 				<input type="button" onclick="sub()" value="-" class="btn-info">
+ 				<input type="button" onclick="mul()" value="*" class="btn-info">
+ 				<input type="button" onclick="div()" value="/" class="btn-info">
+ 				<input type="button" onclick="total()" value="=" class="btn-info">
+
+ 				
+ 				<input type="button" onclick="Clear()" value="C" class="btn-primary w-100">
+
+ 			</form>
+ 			<!--Calculator Start-->
+
+ 		</div>
+ 	</div>
+ </div>
+
+<script>
+
+	// Coding for Mark start
+
+	function dekhbo(){
+
+		var mark =document.result.take_data.value
+
+	 if (mark>100){
+
+		document.result.grade.value = "Enter Only Valid Number"
+	}
+
+	 else if(mark >= 80){
+
+		document.result.grade.value = "A+"
+
+	} else if(mark>=70) {
+
+		document.result.grade.value = "A"
+	}
+
+	else if(mark>=60) {
+
+		document.result.grade.value = "B"
+    }
+
+    else if(mark>=50) {
+
+		document.result.grade.value = "C"
+    }
+
+    else if(mark>=40) {
+
+		document.result.grade.value = "C-"
+    }
+
+    else if(mark>=33) {
+
+		document.result.grade.value = "D"
+    }
+
+     else if(mark<=32) {
+
+		document.result.grade.value = "F"
+    }
+
+    else {
+
+		document.result.grade.value = "Please Enter The Number"
+    }
+
+	}
+
+	// Coding for Mark end
+	
+
+
+
+
+	// Coding for Calculator start
+
+	function zero(){
+
+		document.calculator.display.value+=0
+	}
+
+	function one(){
+		document.calculator.display.value+=1;
+	}
+
+	function two(){
+		document.calculator.display.value+=2;
+	}
+
+	function three(){
+		document.calculator.display.value+=3;
+	}
+
+	function four(){
+		document.calculator.display.value+=4;
+	}
+
+	function five(){
+		document.calculator.display.value+=5;
+	} 
+
+	function six(){
+		document.calculator.display.value+=6;
+	}
+
+	function seven(){
+		document.calculator.display.value+=7;
+	}
+
+	function eight(){
+		document.calculator.display.value+=8;
+	}
+
+	function nine(){
+		document.calculator.display.value+=9;
+	}
+
+	function add(){
+		document.calculator.display.value+= "+";
+	}
+	
+	function sub(){
+		document.calculator.display.value+= "-";
+	}
+
+	function mul(){
+		document.calculator.display.value+= "*";
+	}
+
+	function div(){
+		document.calculator.display.value+= "/";
+	}
+
+	function total(){
+		document.calculator.display.value = eval (document.calculator.display.value)
+
+	}
+
+	function Clear(){
+		document.calculator.display.value = "";
+	}
+
+// Coding for Calculator end
+</script>
+
+
+
+
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-xl-12">
+				<h2>Developed by Tahsin Faruque</h2>
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
